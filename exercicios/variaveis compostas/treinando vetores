@@ -1,0 +1,10 @@
+Algoritmo "vetores"
+   var c, v: inteiro
+   vetor v[7] //definindo o tamanho do vetor[1..6]
+    
+Inicio
+   para c de 1 ate 6 faca
+      Escreva("Digite o", c, "⁰ valor: ")
+      leia(v[c])
+   fimpara
+FimAlgoritmo
