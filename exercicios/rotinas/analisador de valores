@@ -1,0 +1,46 @@
+Algoritmo "Analisador de valores"
+    Var c, n1, SumT, div5, nulo, somaPar: inteiro
+    var m: real   
+
+procedimento valores(v: inteiro)
+inicio 
+   //Soma Total dos valores
+   SumT <- SumT + v
+   
+   //Apenas valores divisíveis por 5
+   se (v % 5 = 0) entao 
+      div5 <- div5 + 1
+   FimSe 
+
+   //Valores nulos
+   se (v=0) entao
+      nulo <- nulo + 1
+   FimSe 
+
+   //Soma dos pares 
+   se (v % 2 = 0) entao 
+      somaPar <- somaPar + v
+
+FimProcedimento 
+
+Inicio
+   SumT <- 0
+   div5 <- 0
+   somaPar <- 0
+   nulo <- 0
+   
+   para c de 1 ate 5 com passo 1 faca 
+      escreval("Digite um valor: ")
+      leia(n1)   
+      valores(n1)
+   fimpara
+
+   //Media
+   m <- SumT / 5
+
+   escreval("Soma: ", SumT)
+   escreval("Média: ", m)
+   escreval("Divisíveis por 5: ", div5)
+   escreval("Nulos: ", nulo)
+   escreval("Soma dos valores pares: ", somaPar)
+FimAlgoritmo
